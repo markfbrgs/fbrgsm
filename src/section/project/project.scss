@@ -13,18 +13,12 @@
             color: #81A5F4;
             font-weight: 900;
             font-size: clamp(1.5rem, 3vw, 2rem);
-            animation: scrolling1;
-            animation-timeline: view();
-            animation-range: entry 0% cover 50%;
         }
 
-        .line {
+        .line-1 {
             width: 60px;
             height: 1px;
             background-color: #81A5F4;
-            animation: scrolling1;
-            animation-timeline: view();
-            animation-range: entry 0% cover 50%;
         }
 
         .row {
@@ -37,9 +31,6 @@
                     background-color: #080808;
                     border-radius: 20px;
                     transition: transform 0.3s ease;
-                    animation: scrolling linear;
-                    animation-timeline: view();
-                    animation-range: entry 0% cover 50%;
 
                     &:hover {
                         transform: translateY(-5px);

@@ -4,6 +4,7 @@ import gearup from '../../assets/icons/gearup.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import Modal from '../../component/modal/modal';
+import { motion } from 'framer-motion';
 
 const Project = () => {
     const [showIcon, setShowIcon] = useState(false);
@@ -12,10 +13,22 @@ const Project = () => {
     return (
         <section id='project' className="project py-5 px-3 p-lg-5">
             <div className='container m-0'>
-                <h2 className='mb-4'> Projects</h2>
-                <div className='line mb-4'></div>
+                <motion.div
+                    initial={{ opacity: 0, x: -100 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: false, amount: 0.5 }}
+                >
+                    <h2 className='title mb-4'>Projects</h2>
+                    <div className='line-1 mb-4'></div>
+                </motion.div>
                 <div className='row'>
-                    <div className="col col-lg-4 col-12 p-3">
+                    <motion.div className="col col-lg-4 col-12 p-3"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: false, amount: 0.5 }}
+                    >
                         <div className='project-card'>
                             <div className='project-img'
                                 onMouseEnter={() => setShowIcon(true)}
@@ -41,21 +54,29 @@ const Project = () => {
                                 </button>
                             </div>
                         </div>
-                    </div>
-                    <div className="col col-lg-4 p-3">
+                    </motion.div>
+                    <motion.div className="col col-lg-4 p-3"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: false, amount: 0.5 }}>
                         <div className='project-card p-4 none'>
                         </div>
-                    </div>
-                    <div className="col col-lg-4 p-3">
+                    </motion.div>
+                    <motion.div className="col col-lg-4 p-3"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: false, amount: 0.5 }}>
                         <div className='project-card p-4 none'>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
 
             <Modal isOpen={showModal} onClose={() => setShowModal(false)} />
         </section>
     );
-} 
+}
 
 export default Project;

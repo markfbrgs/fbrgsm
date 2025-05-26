@@ -4,6 +4,7 @@ import profile from '../../assets/images/profile.png';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import SaveAltIcon from '@mui/icons-material/SaveAlt';
 import pdfURL from '../../assets/resume/Fabregas, Mark Angelo F.pdf';
+import { motion } from 'framer-motion';
 
 const About = () => {
 
@@ -19,13 +20,23 @@ const About = () => {
     return (
         <section id="about" className="about py-5 px-3 p-lg-5">
             <div className='container row px-3'>
-                <div className='left-container col-lg-6 col-md-12 px-0 px-lg-5 py-3 py-lg-5'>
+                <motion.div className='left-container col-lg-6 col-md-12 px-0 px-lg-5 py-3 py-lg-5'
+                    initial={{ opacity: 0, x: -100 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: false, amount: 0.5 }}
+                >
                     <div className='image-container'>
                         <img src={profile} alt="Mark Angelo Fabregas" className='profile img-fluid' />
                     </div>
-                </div>
+                </motion.div>
 
-                <div className='right-container col-lg-6 col-md-12 px-0 px-lg-5 py-3 py-lg-5'>
+                <motion.div className='right-container col-lg-6 col-md-12 px-0 px-lg-5 py-3 py-lg-5'
+                    initial={{ opacity: 0, x: 100 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: false, amount: 0.5 }}
+                >
                     <h2 className='mb-4'> About Me</h2>
                     <div className='line mb-4'></div>
                     <p>
@@ -50,7 +61,7 @@ const About = () => {
                             </button>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </section>
     );

@@ -21,16 +21,29 @@ import git from '../../assets/icons/git.png';
 import github from '../../assets/icons/github.png';
 import figma from '../../assets/icons/figma.png';
 import canva from '../../assets/icons/canva.png';
+import { motion } from 'framer-motion';
 
 const Skills = () => {
 
     return (
         <section id='skills' className="skills py-5 px-3 p-lg-5">
             <div className='container m-0 px-3'>
-                <h2 className='title mb-4'>Skills</h2>
-                <div className='line-1 mb-4'></div>
+                <motion.div
+                    initial={{ opacity: 0, x: -100 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: false, amount: 0.5 }}
+                >
+                    <h2 className='title mb-4'>Skills</h2>
+                    <div className='line-1 mb-4'></div>
+                </motion.div>
                 <div className="categories row">
-                    <div className="skill col-lg-4 col-md-6 col-12 p-3">
+                    <motion.div className="skill col-lg-4 col-md-6 col-12 p-3"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: false, amount: 0.5 }}
+                    >
                         <div className="skill-name p-4">
                             <FontAwesomeIcon icon={faCode} className='icon mb-5' />
                             <h6 className='mb-4'>
@@ -60,9 +73,14 @@ const Skills = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
 
-                    <div className="skill col-lg-4 col-md-6 col-12 p-3">
+                    <motion.div className="skill col-lg-4 col-md-6 col-12 p-3"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: false, amount: 0.5 }}
+                    >
                         <div className="skill-name p-4">
                             <FontAwesomeIcon icon={faLaptopCode} className='icon mb-5' />
                             <h6 className='mb-4'>
@@ -92,9 +110,14 @@ const Skills = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
 
-                    <div className="skill col-lg-4 col-md-6 col-12 p-3">
+                    <motion.div className="skill col-lg-4 col-md-6 col-12 p-3"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: false, amount: 0.5 }}
+                    >
                         <div className="skill-name p-4">
                             <FontAwesomeIcon icon={faServer} className='icon mb-5' />
                             <h6 className='mb-4'>
@@ -112,9 +135,14 @@ const Skills = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
 
-                    <div className="skill col-lg-4 col-md-6 col-12 p-3">
+                    <motion.div className="skill col-lg-4 col-md-6 col-12 p-3"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: false, amount: 0.5 }}
+                    >
                         <div className="skill-name p-4">
                             <FontAwesomeIcon icon={faDatabase} className='icon mb-5' />
                             <h6 className='mb-4'>
@@ -136,9 +164,14 @@ const Skills = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
 
-                    <div className="skill col-lg-4 col-md-6 col-12 p-3">
+                    <motion.div className="skill col-lg-4 col-md-6 col-12 p-3"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: false, amount: 0.5 }}
+                    >
                         <div className="skill-name p-4">
                             <FontAwesomeIcon icon={faScrewdriverWrench} className='icon mb-5' />
                             <h6 className='mb-4'>
@@ -156,9 +189,14 @@ const Skills = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
 
-                    <div className="skill col-lg-4 col-md-6 col-12 p-3">
+                    <motion.div className="skill col-lg-4 col-md-6 col-12 p-3"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: false, amount: 0.5 }}
+                    >
                         <div className="skill-name p-4">
                             <FontAwesomeIcon icon={faPalette} className='icon mb-5' />
                             <h6 className='mb-4'>
@@ -176,10 +214,10 @@ const Skills = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
-        </section>
+        </section >
     );
 }
 
