@@ -9,12 +9,15 @@ const Navbar = () => {
     useEffect(() => {
         const handleScroll = () => {
             const sections = ['home', 'about', 'skills', 'project', 'contact'];
+            const scrollPos = window.scrollY + window.innerHeight / 2;
 
             for (const section of sections) {
                 const element = document.getElementById(section);
                 if (element) {
-                    const rect = element.getBoundingClientRect();
-                    if (rect.top <= 100 && rect.bottom >= 100) {
+                    const top = element.offsetTop;
+                    const bottom = top + element.offsetHeight;
+
+                    if (scrollPos >= top && scrollPos < bottom) {
                         setActiveSection(section);
                         break;
                     }
@@ -23,8 +26,10 @@ const Navbar = () => {
         };
 
         window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Call once on load in case user starts mid-page
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
 
     return (
         <nav>
