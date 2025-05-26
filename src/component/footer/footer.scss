@@ -1,0 +1,30 @@
+footer {
+    height: 25dvh;
+    background-color: #101010;
+    position: relative;
+
+    .faded-border {
+        position: relative;
+        padding-top: 10px;
+    }
+
+    .faded-border::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        height: 1px;
+        background: linear-gradient(to right, transparent, #81A5F4, transparent);
+    }
+
+    .container {
+
+        p {
+            margin: 0;
+            font-weight: 100;
+            font-size: clamp(.8rem, 3vw, 1rem);
+        }
+    }
+}

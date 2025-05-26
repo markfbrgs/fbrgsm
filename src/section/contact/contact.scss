@@ -1,0 +1,75 @@
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    min-height: 65dvh;
+    background-color: #101010;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+
+    .container {
+        height: 100%;
+
+        .chat-icon {
+            color: #81A5F4;
+            font-size: clamp(2rem, 3vw, 3rem);
+            animation: float 2s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            color: #81A5F4;
+            font-weight: 900;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+        }
+
+        p {
+            color: #e4e4e4;
+            margin: 0;
+            font-weight: 100;
+            font-size: clamp(.8rem, 3vw, 1rem);
+        }
+
+        .contact-btn {
+            background-color: transparent;
+            color: #81A5F4;
+            border: solid 2px #81A5F4;
+            border-radius: 10px;
+            transition: all 0.5s ease;
+            font-size: clamp(.8rem, 3vw, 1rem);
+            align-self: center;
+            width: 250px;
+
+            &:hover {
+                background-color: #81A5F4;
+                border-color: none;
+                color: #e4e4e4;
+            }
+        }
+    }
+
+    .icon {
+        position: absolute;
+        bottom: 0;
+        font-size: 2rem;
+        animation: float 2s ease-in-out infinite;
+        color: #e4e4e4;
+        cursor: pointer;
+    }
+}

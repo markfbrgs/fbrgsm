@@ -1,0 +1,29 @@
+.toggle {
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    height: 15vh;
+    width: 15vw;
+    max-width: 40px;
+    max-height: 40px;
+    border-radius: 50%;
+    border: none;
+    z-index: 10;
+    background-color: #080808;
+    color: #fff3b0;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.3);
+
+    .icon {
+        font-size: 1rem;
+        transition: transform 0.4s ease;
+    }
+
+    .light & .icon {
+        transform: rotate(360deg);
+    }
+
+    @media screen and (max-width: 992px) {
+        max-width: 35px;
+        max-height: 35px;
+    }
+}

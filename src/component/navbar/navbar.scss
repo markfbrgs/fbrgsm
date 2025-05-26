@@ -1,0 +1,37 @@
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    height: 12vh;
+
+    .navbar {
+        gap: .3rem;
+        border-radius: 50px;
+        background-color: #080808;
+        border: none;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+
+        a {
+            color: #e4e4e4;
+            font-size: clamp(.9rem, 2vw, 1rem);
+            font-weight: 400;
+            padding: 0.2rem 1rem;
+            border-radius: 5px;
+            transition:
+                color 0.7s ease,
+                background-color 0.7s ease,
+                box-shadow 0.7s ease;
+
+            &.active,
+            &:hover {
+                background-color: rgba(144, 144, 144, 0.3);
+                box-shadow: 0 0 6px rgba(144, 144, 144, 0.4);
+            }
+        }
+    }
+}

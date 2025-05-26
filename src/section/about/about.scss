@@ -1,0 +1,124 @@
+.about {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    min-height: max-content;
+    position: relative;
+
+    .container {
+        z-index: 2;
+        animation: scrolling;
+        animation-timeline: view();
+        animation-range: entry 0% cover 50%;
+
+        .left-container {
+            animation: scrolling linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 50%;
+
+            .image-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img.profile {
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                    filter: grayscale(40%);
+                    background-color: #080808;
+                    border: solid 1px #e4e4e4;
+                    border-radius: 20px;
+                }
+            }
+        }
+
+        .right-container {
+            animation: scrolling 1s linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 50%;
+
+            img {
+                width: 40px;
+                height: 40px;
+            }
+
+            h2 {
+                color: #81A5F4;
+                font-weight: 900;
+                font-size: clamp(1.5rem, 3vw, 2rem);
+            }
+
+            .line {
+                width: 60px;
+                height: 1px;
+                background-color: #81A5F4;
+            }
+
+            p {
+                color: #e4e4e4;
+                font-size: clamp(.8rem, 3vw, 1rem);
+                font-weight: 100;
+            }
+
+            p:nth-child(5) {
+                margin-bottom: 50px;
+            }
+
+
+            .btn-1 {
+                background-color: #e4e4e4;
+                color: #080808;
+                border: none;
+                border-radius: 10px;
+                transition: all 0.5s ease;
+                font-size: clamp(.8rem, 3vw, 1rem);
+
+                &:hover {
+                    background-color: #81A5F4;
+                    color: #e4e4e4;
+                }
+            }
+
+            .btn-2 {
+                background-color: #080808;
+                color: #e4e4e4;
+                border: solid 2px #e4e4e4;
+                border-radius: 10px;
+                transition: all 0.5s ease;
+                font-size: clamp(.8rem, 3vw, 1rem);
+                align-self: center;
+
+                &:hover {
+                    border-color: #81A5F4;
+                    color: #81A5F4;
+                }
+            }
+        }
+    }
+}
+
+@keyframes scrolling {
+    from {
+        opacity: 0;
+        scale: 0;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes scrolling1 {
+    from {
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}

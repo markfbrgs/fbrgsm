@@ -1,0 +1,156 @@
+.App {
+    min-height: 100%;
+    transition: background-color 0.9s ease;
+    background-color: #080808;
+    position: relative;
+}
+
+.light {
+    background-color: #e4e4e4;
+
+    nav {
+        .navbar {
+            background-color: #e4e4e4;
+            border: none;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+            a {
+                color: #080808;
+            }
+        }
+    }
+
+    .toggle {
+        background-color: #e4e4e4;
+        color: #a8d0e6;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .home {
+        .container {
+            p {
+                color: #080808;
+                font-weight: 400;
+            }
+
+            .socials {
+                a {
+                    color: #080808;
+                }
+            }
+
+            .icon {
+                color: #080808;
+            }
+        }
+    }
+
+    .about {
+        .container {
+            .left-container {
+                .image-container {
+                    img.profile {
+                        background-color: #e4e4e4;
+                        border: solid 2px #080808;
+                    }
+                }
+            }
+
+            .right-container {
+                p {
+                    color: #080808;
+                    font-weight: 300;
+                }
+
+                .btn-1 {
+                    border: solid 2px #080808;
+
+                    &:hover {
+                        background-color: #e4e4e4;
+                        color: #81A5F4;
+                        border-color: #81A5F4;
+                    }
+                }
+
+                .btn-2 {
+                    border: none;
+
+                    &:hover {
+                        background-color: #81A5F4;
+                        color: #e4e4e4;
+                    }
+                }
+            }
+        }
+    }
+
+    .skills {
+        .container {
+            .categories {
+                .skill {
+                    color: #080808;
+
+                    .skill-name {
+                        border: solid 2px #080808;
+                        background-color: #e4e4e4;
+
+                        .line {
+                            background-color: #080808;
+                            height: 2px;
+                        }
+
+                        .content {
+                            p {
+                                font-weight: 300;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .project {
+        .container {
+            .row {
+                .col {
+                    color: #080808;
+
+                    .project-card {
+                        border: solid 2px #080808;
+                        background-color: #e4e4e4;
+
+                        .project-desc {
+                            p {
+                                font-weight: 300;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .modal-overlay {
+            .modal-content {
+                background-color: #e4e4e4;
+
+                .project-desc {
+                    color: #080808;
+
+                    p {
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .contact {
+        background-color: #242424;
+    }
+
+    footer {
+        background-color: #242424;
+    }
+}

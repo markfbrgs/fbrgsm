@@ -1,0 +1,87 @@
+.skills {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    min-height: max-content;
+    position: relative;
+
+    .container {
+        z-index: 2;
+
+        h2 {
+            color: #81A5F4;
+            font-weight: 900;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            animation: scrolling1 linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 50%;
+        }
+
+        .line-1 {
+            width: 60px;
+            height: 1px;
+            background-color: #81A5F4;
+            animation: scrolling1 linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 50%;
+        }
+
+        .categories {
+
+            .skill {
+                color: #e4e4e4;
+
+                .skill-name {
+                    height: 100%;
+                    border: solid 1px #e4e4e4;
+                    border-radius: 20px;
+                    background-color: #080808;
+                    transition: transform 0.3s ease;
+                    animation: scrolling;
+                    animation-timeline: view();
+                    animation-range: entry 0% cover 50%;
+
+                    &:hover {
+                        transform: translateY(-5px);
+                    }
+
+                    .icon {
+                        color: #81A5F4;
+                        font-size: 1.5rem;
+                    }
+
+                    .line {
+                        width: 60px;
+                        height: 1px;
+                        background-color: #e4e4e4;
+                    }
+
+                    h6 {
+                        font-size: clamp(1rem, 3vw, 1.2rem);
+                    }
+
+                    .content {
+                        p {
+                            margin: 0;
+                            font-weight: 100;
+                            align-self: center;
+                            font-size: clamp(.8rem, 3vw, 1rem);
+                        }
+
+                        img {
+                            width: auto;
+                            height: 40px;
+                            object-fit: cover;
+                            transition: all 0.6s ease-in-out;
+
+                            &:hover {
+                                transform: scale(1.3);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
